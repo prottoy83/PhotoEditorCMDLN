@@ -7,7 +7,8 @@ The Original Image:</br>
 ![Grayed with average method](Images/grayscale_avg.png)  |  ![Grayed with weighted method](Images/grayscale_lum.png)
  X(img_data) = (R+G+B)/3 | X(img_data) = 0.3R+0.59G+0.11B
  </br>
-
+<b>Color Filters:</b>
+</br>
   RED            |  GREEN     |     BLUE
 :-------------------------:|:-------------------------:|:---------------------:
 ![Red Filter](Images/red.png)  |  ![Green](Images/green.png)  |  ![Blue Filter](Images/blue.png)
