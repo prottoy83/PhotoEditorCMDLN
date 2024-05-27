@@ -1,4 +1,5 @@
 <h1>The Original Image:</h1></br>
+
 ![Original image og Lenna](lena.png)
 </br>
 <h2><b>Grayscale filter<b>:</h2>
