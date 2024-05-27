@@ -6,16 +6,16 @@ using namespace std;
 int main()
 {
     Image test("lena.png");
-    Image copy = test;
-    
-    cout << copy.w << " " << copy.h << " " << copy.channels << endl;
+    Image grayAvg = test;
+    grayAvg.grayscale_avg();
+    grayAvg.write("grayscale_avg.png");
 
-    cout << "Brightness: " << endl;
-    float brightness = 1;
-    cin >> brightness;
-    for (int i = 0; i < copy.w * copy.h * copy.channels; i++) {
-        copy.data[i] = (int)(copy.data[i]* brightness) % 256;
-    }
-        copy.write("copy.png");
+    Image grayLum = test;
+    grayLum.grayscale_lum();
+    grayLum.write("grayscale_lum.png");
+
+    
+    
+
     return 0;
 }

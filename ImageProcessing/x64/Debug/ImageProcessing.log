@@ -1,2 +1,6 @@
-﻿  ImageProcessing.cpp
+﻿  Image.cpp
+D:\Pract\ImageProcessing\Image.cpp(97,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  ImageProcessing.cpp
+  Generating Code...
+D:\Pract\ImageProcessing\Image.cpp(77,1): warning C4715: 'Image::get_file_type': not all control paths return a value
   ImageProcessing.vcxproj -> D:\Pract\ImageProcessing\x64\Debug\ImageProcessing.exe

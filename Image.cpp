@@ -75,3 +75,28 @@ ImageType Image::get_file_type(const char* filename) {
 		return PNG;
 	}
 }
+
+Image& Image::grayscale_avg() {
+	if (channels < 3) {
+
+	}
+	else {
+		for (int i = 0; i < size; i += channels) {
+			int gray = (data[i] + data[i + 1] + data[i + 2])/3;
+			memset(data + i, gray, 3);
+		}
+	}
+	return *this;
+}
+Image& Image::grayscale_lum() {
+	if (channels < 3) {
+
+	}
+	else {
+		for (int i = 0; i < size; i += channels) {
+			int gray = 0.3*data[i]+ 0.59*data[i+1] + 0.11*data[i+2];
+			memset(data + i, gray, 3);
+		}
+	}
+	return *this;
+}

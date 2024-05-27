@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{9EE11A5A-1396-4AC6-ACC2-749D196E5DE5}|ImageProcessing.vcxproj|solutionrelative:ImageProcessing.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EE11A5A-1396-4AC6-ACC2-749D196E5DE5}|ImageProcessing.vcxproj|D:\\Pract\\ImageProcessing\\Image.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9EE11A5A-1396-4AC6-ACC2-749D196E5DE5}|ImageProcessing.vcxproj|solutionrelative:Image.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9EE11A5A-1396-4AC6-ACC2-749D196E5DE5}|ImageProcessing.vcxproj|D:\\Pract\\ImageProcessing\\Image.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9EE11A5A-1396-4AC6-ACC2-749D196E5DE5}|ImageProcessing.vcxproj|solutionrelative:Image.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EE11A5A-1396-4AC6-ACC2-749D196E5DE5}|ImageProcessing.vcxproj|D:\\Pract\\ImageProcessing\\Image.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9EE11A5A-1396-4AC6-ACC2-749D196E5DE5}|ImageProcessing.vcxproj|solutionrelative:Image.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Image.cpp",
-              "DocumentMoniker": "D:\\Pract\\ImageProcessing\\Image.cpp",
-              "RelativeDocumentMoniker": "Image.cpp",
-              "ToolTip": "D:\\Pract\\ImageProcessing\\Image.cpp",
-              "RelativeToolTip": "Image.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-27T08:28:33.903Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Image.h",
               "DocumentMoniker": "D:\\Pract\\ImageProcessing\\Image.h",
               "RelativeDocumentMoniker": "Image.h",
               "ToolTip": "D:\\Pract\\ImageProcessing\\Image.h",
               "RelativeToolTip": "Image.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAOAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAABoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-27T08:25:34.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Image.cpp",
+              "DocumentMoniker": "D:\\Pract\\ImageProcessing\\Image.cpp",
+              "RelativeDocumentMoniker": "Image.cpp",
+              "ToolTip": "D:\\Pract\\ImageProcessing\\Image.cpp",
+              "RelativeToolTip": "Image.cpp",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAkwGAAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-27T08:28:33.903Z",
               "EditorCaption": ""
             },
             {
@@ -58,7 +58,7 @@
               "RelativeDocumentMoniker": "ImageProcessing.cpp",
               "ToolTip": "D:\\Pract\\ImageProcessing\\ImageProcessing.cpp",
               "RelativeToolTip": "ImageProcessing.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA9AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-27T08:16:57.818Z",
               "EditorCaption": ""
