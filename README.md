@@ -10,5 +10,5 @@ The Original Image:</br>
 <b>Color Filter</b>:</br>
        RED      |     GREEN      |      BLUE  
 :--------------:|:--------------:|:----------------:
-![Image with Red Filter](Images/red.png)|![Image with Green Filter](Images/green.png)|![Image with Blue Filter](Images/blue.png)
+![Image with Red Filter](Images/red.png) | ![Image with Green Filter](Images/green.png)  | ![Image with Blue Filter](Images/blue.png)
 </br>
