@@ -1,3 +1,2 @@
 ﻿  ImageProcessing.cpp
-D:\Pract\ImageProcessing\ImageProcessing.cpp(19,22): warning C4305: 'argument': truncation from 'double' to 'float'
   ImageProcessing.vcxproj -> D:\Pract\ImageProcessing\x64\Debug\ImageProcessing.exe

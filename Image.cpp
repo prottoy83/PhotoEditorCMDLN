@@ -114,3 +114,24 @@ Image& Image::colorMask(float r, float g, float b) {
 	}
 	return *this;
 }
+
+Image& Image::brightness_map(float val) {
+	if (channels < 3) {
+
+	}
+	else {
+		for (int i = 0; i < size; i += channels) {
+			if (val > 0) {
+				data[i] = fmin(data[i] + val, 255);
+				data[i + 1] = fmin(data[i + 1] + val, 255);
+				data[i + 2] = fmin(data[i + 2] + val, 255);
+			}
+			else {
+				data[i] = fmax(data[i] + val, 1);
+				data[i + 1] = fmax(data[i + 1] + val, 1);
+				data[i + 2] = fmax(data[i + 2] + val, 1);
+			}
+		}
+	}
+	return *this;
+}

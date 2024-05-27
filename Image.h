@@ -28,4 +28,6 @@ struct Image {
 	Image& grayscale_lum();
 
 	Image& colorMask(float r,float g, float b);
+
+	Image& brightness_map(float val);
 };
