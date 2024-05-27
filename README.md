@@ -1,12 +1,12 @@
-The Original Image:
+The Original Image:</br>
 ![Original image og Lenna](lena.png)
+</br>
+Added grayscale filter:</br>
+  Average Method:</br>
+  ![Grayed with average method](grayscale_avg.png)</br>
+  Here, X(img_data) = (R+G+B)/3 </br>
 
-Added grayscale filter:
-  Average Method:
-  ![Grayed with average method](grayscale_avg.png)
-  Here, X(img_data) = (R+G+B)/3 
-
-  Weighted Method:
-  ![Grayed with weighted method](grayscale_lum.png)
-  Here, X(img_data) = 0.3R+0.59G+0.11B
+  Weighted Method:</br>
+  ![Grayed with weighted method](grayscale_lum.png)</br>
+  Here, X(img_data) = 0.3R+0.59G+0.11B</br>
   
