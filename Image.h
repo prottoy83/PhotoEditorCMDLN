@@ -26,4 +26,6 @@ struct Image {
 
 	Image& grayscale_avg();
 	Image& grayscale_lum();
+
+	Image& colorMask(float r,float g, float b);
 };
