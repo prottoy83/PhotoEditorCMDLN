@@ -12,16 +12,20 @@ int main()
 
     Image grayLum = test;
     grayLum.grayscale_lum();
-    grayLum.write("Images/grayscale_lum.png");
+    grayLum.write("Images/grayscale_lum.png");*/
     
     
     Image colorM = test;
-    colorM.colorMask(0.8,1,1);
-    colorM.write("Images/colorMix.png");*/
+    colorM.colorMask(0.7,0.9,0.8);
+    colorM.write("Images/colorMix.png");
     
-    Image brightM = test;
-    brightM.brightness_map(-80);
-    brightM.write("Images/brightMapDarker.png");
+    /*Image brightM = test;
+    brightM.brightness_map(80);
+    brightM.write("Images/brightMapLighter.png");*/
+
+    /*Image satMap = test;
+    satMap.saturation_mask();
+    satMap.write("Images/saturation.png");*/
 
     return 0;
 }

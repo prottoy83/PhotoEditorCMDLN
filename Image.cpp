@@ -4,6 +4,14 @@
 #include "Dependencies/stb_image.h"
 #include "Dependencies/stb_image_write.h"
 #include "Image.h"
+#include <iostream>
+#include <thread>
+#include <chrono>
+
+using std::chrono::high_resolution_clock;
+
+using std::chrono::duration;
+using std::chrono::milliseconds;
 
 Image::Image(const char* filename, int channel_force) {
 	if (read(filename, channel_force)) {
@@ -101,25 +109,36 @@ Image& Image::grayscale_lum() {
 	return *this;
 }
 
+void colorMaskMultiplier(uint8_t* data, int start, int size, int chan, float val) {
+	for (int i = start; i < size; i += chan) {
+		data[i] *= val;
+	}
+}
+
 Image& Image::colorMask(float r, float g, float b) {
 	if (channels < 3) {
 
 	}
 	else {
-		for (int i= 0; i < size; i += channels) {
-			data[i] *= r;
-			data[i + 1] *= g;
-			data[i + 2] *= b;
-		}
+		std::thread rMask(colorMaskMultiplier, data, 0, size, channels, r);
+		std::thread gMask(colorMaskMultiplier, data, 1, size, channels, g);
+		std::thread bMask(colorMaskMultiplier, data, 2, size, channels, b);
+
+		rMask.join();
+		gMask.join();
+		bMask.join();
 	}
 	return *this;
 }
 
-Image& Image::brightness_map(float val) {
+/*Image& Image::brightness_map(float val) {
+    std::chrono::steady_clock::time_point t1, t2;
+	using std::chrono::duration_cast;
 	if (channels < 3) {
 
 	}
 	else {
+		t1 = high_resolution_clock::now();
 		for (int i = 0; i < size; i += channels) {
 			if (val > 0) {
 				data[i] = fmin(data[i] + val, 255);
@@ -131,6 +150,62 @@ Image& Image::brightness_map(float val) {
 				data[i + 1] = fmax(data[i + 1] + val, 1);
 				data[i + 2] = fmax(data[i + 2] + val, 1);
 			}
+		}
+		t2 = high_resolution_clock::now();
+	}
+
+	duration<double, std::milli> ms_double = t2 - t1;
+
+	std::cout << ms_double.count() << "ms\n";
+
+	return *this;
+}*/
+
+void mChannelBright(uint8_t* data, float val, int stp, int sz, int chn) {
+	if (val > 0) {
+		for (int i = stp; i < sz; i += chn) {
+			data[i] = fmin(data[i] + val, 255);
+		}
+	}
+	else {
+		for (int i = stp; i < sz; i += chn) {
+			data[i] = fmax(data[i] + val, 1);
+		}
+	}
+}
+
+Image& Image::brightness_map(float val) {
+	std::chrono::steady_clock::time_point t1, t2;
+	using std::chrono::duration_cast;
+	if (channels < 3) {
+
+	}
+	else {
+		t1 = high_resolution_clock::now();
+		std::thread rChannel(mChannelBright, data, val, 0, size, channels);
+		std::thread gChannel(mChannelBright, data, val, 1, size, channels);
+		std::thread bChannel(mChannelBright, data, val, 2, size, channels);
+
+		rChannel.join();
+		gChannel.join();
+		bChannel.join();
+		t2 = high_resolution_clock::now();
+	}
+	
+	duration<double, std::milli> ms_double = t2 - t1;
+
+	std::cout << ms_double.count() << "ms\n";
+	return *this;
+}
+
+Image& Image::saturation_mask() {
+	if (channels < 3) {
+
+	}
+	else {
+		for (int i = 0; i < size; i += channels) {
+			int gray = fmax(1.6 * data[i],255) + fmax(1.59 * data[i + 1],255) + fmax(1.11 * data[i + 2],255);
+			memset(data + i, gray, 3);
 		}
 	}
 	return *this;
