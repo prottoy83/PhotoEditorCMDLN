@@ -31,4 +31,6 @@ struct Image {
 
 	Image& brightness_map(float val);
 	Image& saturation_mask();
+
+	Image& diffmap(Image& img);
 };

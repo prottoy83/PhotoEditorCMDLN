@@ -1,6 +1,8 @@
 #define STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 
+#define BYTE_BOUND(value) value < 0 ? 0 : (value > 255 ? 255 : value)
+
 #include "Dependencies/stb_image.h"
 #include "Dependencies/stb_image_write.h"
 #include "Image.h"
@@ -206,6 +208,20 @@ Image& Image::saturation_mask() {
 		for (int i = 0; i < size; i += channels) {
 			int gray = fmax(1.6 * data[i],255) + fmax(1.59 * data[i + 1],255) + fmax(1.11 * data[i + 2],255);
 			memset(data + i, gray, 3);
+		}
+	}
+	return *this;
+}
+
+Image& Image::diffmap(Image& img) {
+	int compare_width = fmin(w,img.w);
+	int compare_height = fmin(h,img.h);
+	int compare_channels = fmin(channels,img.channels);
+	for(uint32_t i=0; i<compare_height; ++i) {
+		for(uint32_t j=0; j<compare_width; ++j) {
+			for(uint8_t k=0; k<compare_channels; ++k) {
+				data[(i*w+j)*channels+k] = BYTE_BOUND(abs(data[(i*w+j)*channels+k] - img.data[(i*img.w+j)*img.channels+k]));
+			}
 		}
 	}
 	return *this;

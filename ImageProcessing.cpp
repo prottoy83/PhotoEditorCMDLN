@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
     Image test("lena.png");
+    Image test2("pepper.png");
     /*Image grayAvg = test;
     grayAvg.grayscale_avg();
     grayAvg.write("Images/grayscale_avg.png");
@@ -15,9 +16,9 @@ int main()
     grayLum.write("Images/grayscale_lum.png");*/
     
     
-    Image colorM = test;
+    /*Image colorM = test;
     colorM.colorMask(0.7,0.9,0.8);
-    colorM.write("Images/colorMix.png");
+    colorM.write("Images/colorMix.png");*/
     
     /*Image brightM = test;
     brightM.brightness_map(80);
@@ -26,6 +27,10 @@ int main()
     /*Image satMap = test;
     satMap.saturation_mask();
     satMap.write("Images/saturation.png");*/
+
+    Image diff = test2;
+    diff.diffmap(test);
+    diff.write("Images/diffustion.png");
 
     return 0;
 }

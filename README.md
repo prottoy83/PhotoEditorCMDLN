@@ -24,3 +24,11 @@
 ![Darker Image](Images/brightMapDarker.png)  |  ![Lighter Image](Images/brightMapLighter.png)
 
 </br>
+
+<h2><b>Difference Map:</b></h2>
+
+  Source Image           |  Difference
+:-------------------------:|:-------------------------:
+![Image2](pepper.png)  |  ![Lighter Image](Images/diffustion.png)
+
+</br>
